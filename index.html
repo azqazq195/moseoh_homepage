@@ -891,36 +891,57 @@
             </div>
           </div>
 
-          <form action="" class="contact__form grid">
+          <form
+            action="https://script.google.com/macros/s/AKfycbzwBK0UN9xKCFPvCE_tr8JHtUuH2YRhjM4OHxv2Wg/exec"
+            method="POST"
+            data-email="azqazq195@gmail.com"
+            class="contact__form grid gform"
+          >
             <div class="contact__inputs grid">
               <div class="contact__content">
-                <label for="" class="contact__label">Name</label>
-                <input type="text" class="contact__input" />
+                <label for="" class="contact__label">Company</label>
+                <input type="text" class="contact__input" name="company" />
               </div>
               <div class="contact__content">
-                <label for="" class="contact__label">Email</label>
-                <input type="email" class="contact__input" />
+                <label for="" class="contact__label">Name</label>
+                <input type="text" class="contact__input" name="name" />
               </div>
             </div>
             <div class="contact__content">
-              <label for="" class="contact__label">Project</label>
-              <input type="text" class="contact__input" />
+              <label for="" class="contact__label">Email</label>
+              <input type="email" class="contact__input" name="email" />
             </div>
             <div class="contact__content">
-              <label for="" class="contact__label">Message</label>
+              <label for="" class="contact__label"> Message </label>
               <textarea
-                name=""
-                id=""
+                name="message"
                 cols="0"
                 rows="7"
                 class="contact__input"
               ></textarea>
             </div>
 
+            <fieldset class="pure-group honeypot-field" style="display: none">
+              <label for="honeypot">
+                To help avoid spam, utilize a Honeypot technique with a hidden
+                text field; must be empty to submit the form! Otherwise, we
+                assume the user is a spam bot.
+              </label>
+              <input id="honeypot" type="text" name="honeypot" value="" />
+            </fieldset>
+
             <div>
-              <a href="#" class="button button--flex">
-                Send Message <i class="uil uil-message button__icon"></i>
-              </a>
+              <button type="submit" class="button button--flex send__message">
+                Send Message
+                <i class="uil uil-message button__icon"></i>
+              </button>
+            </div>
+
+            <!-- Customise the Thankyou Message People See when they submit the form: -->
+            <div class="thankyou_message" style="display: none">
+              <p>
+                <em>Thanks</em> for contacting us! We will get back to you soon!
+              </p>
             </div>
           </form>
         </div>
@@ -987,5 +1008,12 @@
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
+
+    <!-- Submit the Form to Google Using "AJAX" -->
+    <script
+      data-cfasync="false"
+      type="text/javascript"
+      src="assets/js/form-submission-handler.js"
+    ></script>
   </body>
 </html>
