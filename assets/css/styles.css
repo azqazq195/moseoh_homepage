@@ -511,31 +511,23 @@ img {
   background-color: var(--first-color);
 }
 
-.skills__html {
-  width: 90%;
-}
-
-.skills__css {
-  width: 80%;
-}
-
-.skills__js {
+.skills__flutter {
   width: 60%;
 }
 
-.skills__react {
-  width: 85%;
+.skills__android {
+  width: 30%;
 }
 
 .skills__java {
   width: 90%;
 }
 
-.skills__python {
-  width: 80%;
+.skills__kotlin {
+  width: 40%;
 }
 
-.skills__firebase {
+.skills__aws {
   width: 30%;
 }
 
@@ -1076,7 +1068,10 @@ img {
     justify-self: center;
   }
 
-  .about__container,
+  .about__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .skills__container,
   .portfolio__content,
   .project__container,
@@ -1179,11 +1174,11 @@ img {
   }
 
   .about__info {
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .about__buttons {
-    justify-content: initial;
+    justify-content: center;
   }
 
   .qualification__tabs {
