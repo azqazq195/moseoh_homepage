@@ -520,15 +520,15 @@ img {
 }
 
 .skills__java {
-  width: 90%;
+  width: 80%;
 }
 
 .skills__kotlin {
-  width: 40%;
+  width: 60%;
 }
 
-.skills__aws {
-  width: 20%;
+.skills__typescript {
+  width: 40%;
 }
 
 .skills__close .skills__list {
