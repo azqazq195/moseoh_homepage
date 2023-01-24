@@ -1,9 +1,0 @@
-version: '3.8'
-
-services:
-  nginx:
-    container_name: nginx
-    # platform: linux/amd64
-    image: azqazq195/moseoh-homepage
-    ports:
-      - "80:80"

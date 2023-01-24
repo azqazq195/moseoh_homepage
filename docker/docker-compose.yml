@@ -1,0 +1,43 @@
+version: '3.3'
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./data/nginx/conf.d:/etc/nginx/conf.d
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    networks:
+      - default
+      - moseoh_net
+
+
+  certbot:
+    container_name: certbot
+    image: certbot/certbot
+    restart: always
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    networks:
+      - default
+      - moseoh_net
+
+  homepage:
+    container_name: homepage
+    image: azqazq195/moseoh-homepage
+    restart: always
+    expose:
+      - "80"
+    networks:
+      - default
+      - moseoh_net
+
+networks:
+  moseoh_net:
+    driver: bridge
