@@ -79,3 +79,4 @@ echo
 echo "### Reloading nginx ..."
 docker-compose exec nginx nginx -s reload
 docker compose up -d
+docker compose stop certbot
