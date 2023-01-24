@@ -7,3 +7,6 @@ unzip master.zip
 mv moseoh_homepage-master/docker ./docker
 rm -rf master.zip
 rm -rf moseoh_homepage-master
+cd docker
+chmod +x init-letsencrypt.sh
+./init-letsencrypt.sh
