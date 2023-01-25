@@ -1,3 +1,6 @@
+# 메모
+
+```shell
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 docker rmi $(docker images -aq)
@@ -10,3 +13,4 @@ rm -rf moseoh_homepage-master
 cd docker
 chmod +x init-letsencrypt.sh
 ./init-letsencrypt.sh
+```
